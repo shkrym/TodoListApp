@@ -5,7 +5,7 @@
 
             <v-card class="pa-4">
             <v-card-title >
-              <h3 class="display-1">To-do Notes</h3>
+              <h3 class="display-1">To-do List</h3>
             </v-card-title>
 
             <v-form @submit.prevent="addTask">
