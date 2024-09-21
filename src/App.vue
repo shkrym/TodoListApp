@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <!-- Main Navigation (Optional) -->
+    <v-app-bar app color="blue">
+      <v-toolbar-title>To-Do Notes</v-toolbar-title>
+    </v-app-bar>
+
+    <!-- Main Content -->
+    <v-main>
+      <div style="background-color: #f0f0f0; min-height: 100vh;">
+        <v-container>
+          <!-- Include the To-Do List Component Here -->
+          <TodoListAct />
+        </v-container>
+      </div>      
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoListAct from './components/TodoListAct.vue';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    TodoListAct,
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
